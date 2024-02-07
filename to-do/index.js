@@ -126,3 +126,9 @@ showCompletedButton.onclick = function() {
   addElementsToPageFrom(completedTasks);
 };
 
+let showAllButton = document.querySelector(".all");
+showAllButton.onclick = function() {
+  // show all tasks
+  addElementsToPageFrom(arrayOfTasks);
+};
+  
