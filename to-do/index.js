@@ -37,7 +37,17 @@ tasks.addEventListener("click", (e) => {
   }
   // task element
   if (e.target.classList.contains("task")) {
-
+    //toggle class
+    e.target.classList.toggle("done");
+    //update array
+    arrayOfTasks = arrayOfTasks.map((task) => {
+      if (task.id === parseInt(e.target.getAttribute("data-id"))) {
+        task.completed = !task.completed;
+      }
+      return task;
+    });
+    //update local storage
+    addDataToLocalStorageFrom(arrayOfTasks);
   }
 });
 
@@ -95,3 +105,14 @@ function deleteTaskFromLocalStorage(id) {
   arrayOfTasks = arrayOfTasks.filter((task) => task.id !== parseInt(id));
   addDataToLocalStorageFrom(arrayOfTasks);
 }
+
+let deleteCompleted = document.querySelector(".clear");
+
+deleteCompleted.onclick = function() {
+  // filter out completed tasks
+  arrayOfTasks = arrayOfTasks.filter((task) => !task.completed);
+  // update local storage
+  addDataToLocalStorageFrom(arrayOfTasks);
+  // update page
+  addElementsToPageFrom(arrayOfTasks);
+};
