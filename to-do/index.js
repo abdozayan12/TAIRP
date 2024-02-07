@@ -138,5 +138,3 @@ showActiveButton.onclick = function() {
   let activeTasks = arrayOfTasks.filter((task) => !task.completed);
   addElementsToPageFrom(activeTasks);
 };
-```
-```

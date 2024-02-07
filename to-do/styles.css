@@ -79,6 +79,13 @@ h1 {
     font-size: 1.2em;
 }
 
+.task:hover {
+    background-color: #d95e5e;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .delete {
     background-color: #ff0000;
     color: #fff;
@@ -88,4 +95,21 @@ h1 {
     cursor: pointer;
     transition: 0.3s;
     font-size: .8em;
+}
+
+.buttons button {
+    background-color: #1674f8d2;
+    color: black;
+    border: 1px solid #220101;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: .8em;
+}
+
+.buttons button:hover {
+    background-color: #0043ff;
+    transition: 0.3s;
+    color: #fff;
 }
