@@ -116,3 +116,13 @@ deleteCompleted.onclick = function() {
   // update page
   addElementsToPageFrom(arrayOfTasks);
 };
+
+let showCompletedButton = document.querySelector(".completed");
+
+showCompletedButton.onclick = function() {
+  // filter out completed tasks
+  let completedTasks = arrayOfTasks.filter((task) => task.completed);
+  // update page
+  addElementsToPageFrom(completedTasks);
+};
+
