@@ -20,16 +20,18 @@ submit.onclick = function() {
 
 // select task element
 tasks.addEventListener("click", (e) => {
-  //delete button
-  if(e.target.classlist.contains("delete")){
-    //remove task from local storage
+  // delete button
+  if (e.target.classList.contains("delete")) {
+    // remove task from local storage
     deleteTaskFromLocalStorage(e.target.parentElement.getAttribute("data-id"));
-    //remove task from array
+    // remove task from array
+    arrayOfTasks = arrayOfTasks.filter((task) => task.id !== parseInt(e.target.parentElement.getAttribute("data-id")));
+    // remove task from page
     e.target.parentElement.remove();
   }
-    //task element
-  if(e.target.classList.contains("task")) {
-    
+  // task element
+  if (e.target.classList.contains("task")) {
+
   }
 });
 
