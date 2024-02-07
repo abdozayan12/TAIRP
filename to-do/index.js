@@ -11,6 +11,12 @@ if (localStorage.getItem("tasks") !== null) {
 getDataFromLocalStorage();
 
 // add task
+input.addEventListener("keydown", function(event) {
+  if (event.key === "Enter" && input.value !== "") {
+    addTaskToArray(input.value);  //add task to array
+    input.value = ""; //clear input field
+  }
+});
 submit.onclick = function() {
   if (input.value !== ""){
     addTaskToArray(input.value);  //add task to array
