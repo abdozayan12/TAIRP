@@ -13,7 +13,7 @@ body {
 h1 {
     color: #333;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2.5em;
     margin-bottom: 20px;
     font-weight: 400;
@@ -66,6 +66,8 @@ h1 {
 }
 
 .tasks .task.done {
+    text-decoration: line-through;
+    background-color: rgb(12, 19, 20);
     opacity: 0.5;
 }
 
@@ -80,7 +82,7 @@ h1 {
 }
 
 .task:hover {
-    background-color: #d95e5e;
+    background-color: #5ed9c7;
     color: #fff;
     transition: 0.3s;
     cursor: pointer;
@@ -95,6 +97,12 @@ h1 {
     cursor: pointer;
     transition: 0.3s;
     font-size: .8em;
+}
+
+.delete:hover {
+    background-color: #ff4d4d;
+    transition: 0.3s;
+    color: #fff;
 }
 
 .buttons button {
