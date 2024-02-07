@@ -138,3 +138,13 @@ showActiveButton.onclick = function() {
   let activeTasks = arrayOfTasks.filter((task) => !task.completed);
   addElementsToPageFrom(activeTasks);
 };
+
+let clearAllButton = document.querySelector(".clearAll");
+clearAllButton.onclick = function() {
+  // clear local storage
+  window.localStorage.clear();
+  // clear array
+  arrayOfTasks = [];
+  // clear page
+  tasks.innerHTML = "";
+};
