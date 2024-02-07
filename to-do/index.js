@@ -132,3 +132,11 @@ showAllButton.onclick = function() {
   addElementsToPageFrom(arrayOfTasks);
 };
   
+let showActiveButton = document.querySelector(".active");
+// show active tasks
+showActiveButton.onclick = function() {
+  let activeTasks = arrayOfTasks.filter((task) => !task.completed);
+  addElementsToPageFrom(activeTasks);
+};
+```
+```
