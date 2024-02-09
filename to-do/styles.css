@@ -1,0 +1,123 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(images/pexels-tara-winstead-6690914.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(35, 67, 76); */
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: beige;
+}
+
+.add {
+    width: 20%;
+    border: none;
+    border-radius: 5px;
+    background-color: #d95e5e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(35, 67, 76);
+    border: 3px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.tasks .task.done {
+    text-decoration: line-through;
+    background-color: rgb(12, 19, 20);
+    opacity: 0.5;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid #ddd; 
+    background-color: rgb(67, 90, 97);
+    font-size: 1.2em;
+}
+
+.task:hover {
+    background-color: #5ed9c7;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid #220101;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: .8em;
+}
+
+.delete:hover {
+    background-color: #ff4d4d;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.buttons button {
+    background-color: #1674f8d2;
+    color: black;
+    border: 1px solid #220101;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: .8em;
+}
+
+.buttons button:hover {
+    background-color: #0043ff;
+    transition: 0.3s;
+    color: #fff;
+}
