@@ -1,14 +1,12 @@
 .container {
   width: 75%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-
-  /* height: 100vh; */
   margin: auto;
-
-  /* margin-top: 75px; */
   border-radius: 10px;
-  background-image: linear-gradient(315deg, #0b2c3f 0%, #071428 74%, #070928 100%);
+  background-image: linear-gradient(45deg, black, transparent);
+  border: 1px red solid;
 }
 
 .top-section {
@@ -38,11 +36,12 @@
   background-color: #fff;
   border-radius: 50%;
   font-size: 30px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
 .weather-icon {
+  background-image: linear-gradient(45deg, black, transparent);
   display: flex;
   justify-content: center;
 }
@@ -50,7 +49,7 @@
 .temperature {
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #000;
   font-size: 120px;
   font-weight: 400;
 }
@@ -58,14 +57,14 @@
 .city {
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #000;
   font-size: 60px;
   font-weight: 400;
 }
 
 .data-container {
   margin-top: 50px;
-  color: #fff;
+  color: #000;
   display: flex;
   justify-content: center;
 }
@@ -75,6 +74,10 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
+}
+
+.element img {
+  background-image: linear-gradient(45deg, black, transparent);
 }
 
 .data {
@@ -89,4 +92,62 @@
 
 .Icon {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, black, transparent);
+    border: 1px red solid;
+  }
+
+  .top-section {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .top-section input {
+    width: 100%;
+  }
+
+  .weather-icon img {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .temperature {
+    font-size: 80px;
+    margin-top: 15px;
+  }
+
+  .city {
+    font-size: 40px;
+  }
+
+  .data-container {
+    margin-top: 30px;
+  }
+
+  .element {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .data {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .Icon {
+    margin-top: 20px;
+  }
 }

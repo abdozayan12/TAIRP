@@ -1,4 +1,3 @@
-import './WeatherApp.css';
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import WeatherCard from './WeatherCard';
@@ -7,20 +6,20 @@ import cloudIcon from '../assets/cloud.png';
 import rainIcon from '../assets/rain.png';
 import snowIcon from '../assets/snow.png';
 import drizzleIcon from '../assets/drizzle.png';
+import fetchWeatherData from './api';
+import './WeatherApp.css';
 
 const WeatherApp = () => {
-  const apiKey = '5d1c474ea33a56bbc6a79adc3b6b3451';
-
   const [wicon, setwicon] = useState(cloudIcon);
+
   const search = async () => {
     const element = document.getElementsByClassName('CityInput');
     if (element[0].value === '') {
       return 0;
     }
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${apiKey}`;
 
-    const response = await fetch(url);
-    const data = await response.json();
+    const data = await fetchWeatherData(element[0].value);
+
     const humidity = document.getElementsByClassName('humidity');
     const wind = document.getElementsByClassName('wind');
     const temperature = document.getElementsByClassName('temperature');
@@ -50,13 +49,14 @@ const WeatherApp = () => {
     }
     return data;
   };
+
   return (
     <div className="container">
       <SearchBar onSearch={search} />
       <div className="weather-icon">
         <img src={wicon} alt="cloudIcon" />
       </div>
-      <div className="temperature">25°C</div>
+      <div className="temperature">10°C</div>
       <div className="city">New York</div>
       <WeatherCard humidity="64" wind="18" />
     </div>
